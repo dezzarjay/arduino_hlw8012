@@ -27,6 +27,8 @@ double mgos_hlw8012_getVoltage(HLW8012 *hlw);
 
 double mgos_hlw8012_getActivePower(HLW8012 *hlw);
 
+double mgos_hlw8012_getApparentPower(HLW8012 *hlw);
+
 double mgos_hlw8012_getPowerFactor(HLW8012 *hlw);
 
 double mgos_hlw8012_getReactivePower(HLW8012 *hlw);

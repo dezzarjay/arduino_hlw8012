@@ -46,12 +46,12 @@ double mgos_hlw8012_getEnergy(HLW8012 *hlw) {
      return (hlw == nullptr) ? -1 : hlw->getEnergy();
 }
 
-void cf_interrupt(HLW8012 *hlw) {
+void mgos_hlw8012_cf_interrupt(HLW8012 *hlw) {
   if (hlw == nullptr) return;
   hlw->cf_interrupt();
 }
 
-void cf1_interrupt(HLW8012 *hlw) {
+void mgos_hlw8012_cf_interrupt(HLW8012 *hlw) {
   if (hlw == nullptr) return;
   hlw->cf1_interrupt();
 }

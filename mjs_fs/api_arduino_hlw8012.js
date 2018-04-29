@@ -1,4 +1,4 @@
-let Adafruit_HTU21DF = {
+let HLW8012 = {
 
     _create: ffi('void *mgos_hlw8012_create()'),
     _begin: ffi('void mgos_hlw8012_begin(void *, char, char, char, char, bool, double)'),
@@ -8,8 +8,8 @@ let Adafruit_HTU21DF = {
     _getApparentPower: ffi('double mgos_hlw8012_getApparentPower(void *)'),
     _getPowerFactor: ffi('double mgos_hlw8012_getPowerFactor(void *)'),
     _getEnergy: ffi('double mgos_hlw8012_getEnergy(void *)'),
-    _cf_interrupt: ffi('void cf_interrupt(void *)'),
-    _cf1_interrupt: ffi('void cf1_interrupt(void *)'),
+    _cf_interrupt: ffi('void mgos_hlw8012_cf_interrupt(void *)'),
+    _cf1_interrupt: ffi('void mgos_hlw8012_cf_interrupt(void *)'),
 
     _proto: {
 
