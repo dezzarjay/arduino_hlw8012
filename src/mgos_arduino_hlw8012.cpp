@@ -51,7 +51,7 @@ void mgos_hlw8012_cf_interrupt(HLW8012 *hlw) {
   hlw->cf_interrupt();
 }
 
-void mgos_hlw8012_cf_interrupt(HLW8012 *hlw) {
+void mgos_hlw8012_cf1_interrupt(HLW8012 *hlw) {
   if (hlw == nullptr) return;
   hlw->cf1_interrupt();
 }
