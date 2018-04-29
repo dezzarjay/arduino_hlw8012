@@ -8,8 +8,8 @@ let Adafruit_HTU21DF = {
     _getApparentPower: ffi('double mgos_hlw8012_getApparentPower(void *)'),
     _getPowerFactor: ffi('double mgos_hlw8012_getPowerFactor(void *)'),
     _getEnergy: ffi('double mgos_hlw8012_getEnergy(void *)'),
-    _cf_interrupt: ffi('cf_interrupt(void *)'),
-    _cf1_interrupt: ffi('cf1_interrupt(void *)'),
+    _cf_interrupt: ffi('void cf_interrupt(void *)'),
+    _cf1_interrupt: ffi('void cf1_interrupt(void *)'),
 
     _proto: {
 
@@ -25,30 +25,30 @@ let Adafruit_HTU21DF = {
         // ## **`myHTU.readTemperature()`**
         // Read the current temperature.
         // Return value: current temperature value in Celsius as a double.
-         getCurrent: function () {
+        getCurrent: function () {
             return HLW8012._getCurrent(this.hlw);
         },
 
         // ## **`myHTU.readHumidity()`**
         // Read the current relative humidity as a percentage.
         // Return value: current humidity value as a double.
-         getVoltage: function () {
+        getVoltage: function () {
             return HLW8012._getVoltage(this.hlw);
         },
 
-         getActivePower: function () {
+        getActivePower: function () {
             return HLW8012._getActivePower(this.hlw);
         },
 
-         getApparentPower: function () {
+        getApparentPower: function () {
             return HLW8012._getApparentPower(this.hlw);
         },
 
-         getPowerFactor: function () {
+        getPowerFactor: function () {
             return HLW8012._getPowerFactor(this.hlw);
         },
 
-         getEnergy: function () {
+        getEnergy: function () {
             return HLW8012._getEnergy(this.hlw);
         },
 
