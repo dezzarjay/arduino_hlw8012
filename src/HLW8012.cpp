@@ -45,7 +45,8 @@ void HLW8012::begin(
     _calculateDefaultMultipliers();
 
     _mode = _current_mode;
-    digitalWrite(_sel_pin, _mode);
+    //digitalWrite(_sel_pin, _mode);
+    digitalWrite(_sel_pin, HIGH);
 
 
 }
