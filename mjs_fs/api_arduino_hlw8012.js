@@ -1,7 +1,7 @@
 let HLW8012 = {
 
     _create: ffi('void *mgos_hlw8012_create()'),
-    _begin: ffi('void mgos_hlw8012_begin(void *, char, char, char, char, bool, double)'),
+    //_begin: ffi('void mgos_hlw8012_begin(void *, char, char, char, char, bool, double)'),
     
     _proto: {
 
@@ -10,9 +10,9 @@ let HLW8012 = {
         // ## **`myHTU.begin()`**
         // Initialize sensor and make it ready for use.
         // Return value: 1 if sensor is ready, 0 otherwise.
-        begin: function () {
+       /* begin: function () {
             return HLW8012._begin(this.hlw);
-        },
+        },*/
 
         
     },
