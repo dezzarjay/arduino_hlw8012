@@ -61,6 +61,7 @@ typedef enum {
 class HLW8012 {
 
     public:
+        HLW8012();
 
         void cf_interrupt();
         void cf1_interrupt();
