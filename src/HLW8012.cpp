@@ -22,6 +22,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <Arduino.h>
 #include "HLW8012.h"
 
+HLW8012::HLW8012() {
+}
+
 void HLW8012::begin(
     unsigned char cf_pin,
     unsigned char cf1_pin,
