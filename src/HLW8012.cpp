@@ -31,7 +31,7 @@ void HLW8012::begin(
     unsigned char sel_pin,
     unsigned char currentWhen,
     bool use_interrupts,
-    unsigned int pulse_timeout
+    int pulse_timeout
     ) {
 
     _cf_pin = cf_pin;
