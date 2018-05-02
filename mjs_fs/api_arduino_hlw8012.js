@@ -10,9 +10,9 @@ let HLW8012 = {
         // ## **`myHTU.begin()`**
         // Initialize sensor and make it ready for use.
         // Return value: 1 if sensor is ready, 0 otherwise.
-       /* begin: function () {
+        begin: function () {
             return HLW8012._begin(this.hlw);
-        },*/
+        },
 
         
     },
