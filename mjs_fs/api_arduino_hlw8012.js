@@ -9,7 +9,7 @@ let HLW8012 = {
     _getPowerFactor: ffi('double mgos_hlw8012_getPowerFactor(void *)'),
     _getEnergy: ffi('double mgos_hlw8012_getEnergy(void *)'),
     _cf_interrupt: ffi('void mgos_hlw8012_cf_interrupt(void *)'),
-    _cf1_interrupt: ffi('void mgos_hlw8012_cf_interrupt(void *)'),
+    _cf1_interrupt: ffi('void mgos_hlw8012_cf1_interrupt(void *)'),
 
     _proto: {
 

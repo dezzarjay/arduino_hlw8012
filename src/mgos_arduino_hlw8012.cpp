@@ -7,6 +7,16 @@ HLW8012 *mgos_hlw8012_create() {
     return new HLW8012();
 }
 
+void mgos_hlw8012_cf_interrupt(HLW8012 *hlw) {
+  if (hlw == nullptr) return;
+  hlw->cf_interrupt();
+}
+
+void mgos_hlw8012_cf1_interrupt(HLW8012 *hlw) {
+  if (hlw == nullptr) return;
+  hlw->cf1_interrupt();
+}
+
 void mgos_hlw8012_begin(HLW8012 *hlw, char cf_pin, char cf1_pin, char sel_pin, char currentWhen, bool use_interrupts) {
   if (hlw == nullptr) return;
   hlw->begin(cf_pin, cf1_pin, sel_pin, currentWhen, use_interrupts);
@@ -34,27 +44,19 @@ double mgos_hlw8012_getApparentPower(HLW8012 *hlw) {
      return (hlw == nullptr) ? -1 : hlw->getApparentPower();
 }
 
-double mgos_hlw8012_getReactivePower(HLW8012 *hlw) {
-     return (hlw == nullptr) ? -1 : hlw->getReactivePower();
-}
-
 double mgos_hlw8012_getPowerFactor(HLW8012 *hlw) {
      return (hlw == nullptr) ? -1 : hlw->getPowerFactor();
+}
+
+double mgos_hlw8012_getReactivePower(HLW8012 *hlw) {
+     return (hlw == nullptr) ? -1 : hlw->getReactivePower();
 }
 
 double mgos_hlw8012_getEnergy(HLW8012 *hlw) {
      return (hlw == nullptr) ? -1 : hlw->getEnergy();
 }
 
-void mgos_hlw8012_cf_interrupt(HLW8012 *hlw) {
-  if (hlw == nullptr) return;
-  hlw->cf_interrupt();
-}
 
-void mgos_hlw8012_cf1_interrupt(HLW8012 *hlw) {
-  if (hlw == nullptr) return;
-  hlw->cf1_interrupt();
-}
 
 
 
