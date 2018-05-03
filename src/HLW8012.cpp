@@ -30,8 +30,7 @@ void HLW8012::begin(
     unsigned char cf1_pin,
     unsigned char sel_pin,
     unsigned char currentWhen,
-    bool use_interrupts,
-    ) {
+    bool use_interrupts) {
 
     _cf_pin = cf_pin;
     _cf1_pin = cf1_pin;
