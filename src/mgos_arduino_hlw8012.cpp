@@ -12,6 +12,12 @@ void mgos_hlw8012_begin(HLW8012 *hlw, char cf_pin, char cf1_pin, char sel_pin, c
   hlw->begin(cf_pin, cf1_pin, sel_pin, currentWhen, use_interrupts);
 }
 
+double mgos_hlw8012_getCurrent(HLW8012 *hlw) {
+     return (hlw == nullptr) ? -1 : hlw->getCurrent();
+}
 
+double mgos_hlw8012_getVoltage(HLW8012 *hlw) {
+     return (hlw == nullptr) ? -1 : hlw->getVoltage();
+}
 
 
