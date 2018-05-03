@@ -12,6 +12,49 @@ void mgos_hlw8012_begin(HLW8012 *hlw, char cf_pin, char cf1_pin, char sel_pin, c
   hlw->begin(cf_pin, cf1_pin, sel_pin, currentWhen, use_interrupts);
 }
 
+// potential error area
+/*void mgos_hlw8012_setMode(HLW8012 *hlw, char mode) {
+  if (hlw == nullptr) return;
+  hlw->setMode(mode);
+} */
+
+double mgos_hlw8012_getCurrent(HLW8012 *hlw) {
+     return (hlw == nullptr) ? -1 : hlw->getCurrent();
+}
+
+double mgos_hlw8012_getVoltage(HLW8012 *hlw) {
+     return (hlw == nullptr) ? -1 : hlw->getVoltage();
+}
+
+double mgos_hlw8012_getActivePower(HLW8012 *hlw) {
+     return (hlw == nullptr) ? -1 : hlw->getActivePower();
+}
+
+double mgos_hlw8012_getApparentPower(HLW8012 *hlw) {
+     return (hlw == nullptr) ? -1 : hlw->getApparentPower();
+}
+
+double mgos_hlw8012_getReactivePower(HLW8012 *hlw) {
+     return (hlw == nullptr) ? -1 : hlw->getReactivePower();
+}
+
+double mgos_hlw8012_getPowerFactor(HLW8012 *hlw) {
+     return (hlw == nullptr) ? -1 : hlw->getPowerFactor();
+}
+
+double mgos_hlw8012_getEnergy(HLW8012 *hlw) {
+     return (hlw == nullptr) ? -1 : hlw->getEnergy();
+}
+
+void mgos_hlw8012_cf_interrupt(HLW8012 *hlw) {
+  if (hlw == nullptr) return;
+  hlw->cf_interrupt();
+}
+
+void mgos_hlw8012_cf1_interrupt(HLW8012 *hlw) {
+  if (hlw == nullptr) return;
+  hlw->cf1_interrupt();
+}
 
 
 
