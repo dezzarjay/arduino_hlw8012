@@ -1,7 +1,7 @@
 let HLW8012 = {
 
     _create: ffi('void *mgos_hlw8012_create()'),
-    _begin: ffi('void mgos_hlw8012_begin(void *, char, char, char, char, bool, int)'),
+    _begin: ffi('void mgos_hlw8012_begin(void *, char *, char *, char *, char *, bool)'),
     
     _proto: {
 
