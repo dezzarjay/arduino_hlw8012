@@ -71,8 +71,7 @@ class HLW8012 {
             unsigned char cf1_pin,
             unsigned char sel_pin,
             unsigned char currentWhen = HIGH,
-            bool use_interrupts = true,
-            int pulse_timeout = PULSE_TIMEOUT);
+            bool use_interrupts = true);
 
         void setMode(hlw8012_mode_t mode);
         hlw8012_mode_t getMode();
