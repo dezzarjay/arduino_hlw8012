@@ -2,14 +2,14 @@ let HLW8012 = {
 
     _create: ffi('void *mgos_hlw8012_create()'),
     _begin: ffi('void mgos_hlw8012_begin(void *, char *, char *, char *, char *, bool)'),
-    _getCurrent: ffi('double mgos_hlw8012_getCurrent(void *)'),
+    /*_getCurrent: ffi('double mgos_hlw8012_getCurrent(void *)'),
     _getVoltage: ffi('double mgos_hlw8012_getVoltage(void *)'),
     _getActivePower: ffi('double mgos_hlw8012_getActivePower(void *)'),
     _getApparentPower: ffi('double mgos_hlw8012_getApparentPower(void *)'),
     _getPowerFactor: ffi('double mgos_hlw8012_getPowerFactor(void *)'),
     _getEnergy: ffi('double mgos_hlw8012_getEnergy(void *)'),
     _cf_interrupt: ffi('void mgos_hlw8012_cf_interrupt(void *)'),
-    _cf1_interrupt: ffi('void mgos_hlw8012_cf1_interrupt(void *)'),
+    _cf1_interrupt: ffi('void mgos_hlw8012_cf1_interrupt(void *)'),*/
 
     _proto: {
 
@@ -25,7 +25,7 @@ let HLW8012 = {
         // ## **`myHTU.readTemperature()`**
         // Read the current temperature.
         // Return value: current temperature value in Celsius as a double.
-        getCurrent: function () {
+        /*getCurrent: function () {
             return HLW8012._getCurrent(this.hlw);
         },
 
@@ -58,7 +58,7 @@ let HLW8012 = {
 
         cf1_interrupt: function () {
             HLW8012._cf1_interrupt(this.hlw);
-        }
+        }*/
         
     },
 
