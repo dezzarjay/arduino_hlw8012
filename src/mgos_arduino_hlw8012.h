@@ -13,7 +13,7 @@ extern "C" {
 
 HLW8012 *mgos_hlw8012_create();
 
-void mgos_hlw8012_begin(HLW8012 *hlw, char cf_pin, char cf1_pin, char sel_pin, char currentWhen, bool use_interrupts);
+void mgos_hlw8012_begin(HLW8012 *hlw);
 
 double mgos_hlw8012_getCurrent(HLW8012 *hlw);
 
