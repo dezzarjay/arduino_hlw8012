@@ -25,18 +25,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 HLW8012::HLW8012() {
 }
 
-void HLW8012::begin(
-    unsigned char cf_pin,
-    unsigned char cf1_pin,
-    unsigned char sel_pin,
-    unsigned char currentWhen,
-    bool use_interrupts) {
+void HLW8012::begin() {
 
-    _cf_pin = cf_pin;
-    _cf1_pin = cf1_pin;
-    _sel_pin = sel_pin;
-    _current_mode = currentWhen;
-    _use_interrupts = use_interrupts;
+    _cf_pin = 14;
+    _cf1_pin = 13;
+    _sel_pin = 5;
+    _current_mode = HIGH;
+    _use_interrupts = false;
     _pulse_timeout = 500000;
 
     pinMode(_cf_pin, INPUT_PULLUP);
@@ -46,8 +41,8 @@ void HLW8012::begin(
     _calculateDefaultMultipliers();
 
     _mode = _current_mode;
-    //digitalWrite(_sel_pin, _mode);
-    digitalWrite(_sel_pin, HIGH);
+    digitalWrite(_sel_pin, _mode);
+    //digitalWrite(_sel_pin, HIGH);
 
 
 }

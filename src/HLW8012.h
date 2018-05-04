@@ -66,12 +66,7 @@ class HLW8012 {
         void cf_interrupt();
         void cf1_interrupt();
 
-        void begin(
-            unsigned char cf_pin,
-            unsigned char cf1_pin,
-            unsigned char sel_pin,
-            unsigned char currentWhen = HIGH,
-            bool use_interrupts = true);
+        void begin();
 
         void setMode(hlw8012_mode_t mode);
         hlw8012_mode_t getMode();

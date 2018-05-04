@@ -1,7 +1,7 @@
 let HLW8012 = {
 
     _create: ffi('void *mgos_hlw8012_create()'),
-    _begin: ffi('void mgos_hlw8012_begin(void *, char *, char *, char *, char *, bool)'),
+    _begin: ffi('void mgos_hlw8012_begin(void *)'),
     _getCurrent: ffi('double mgos_hlw8012_getCurrent(void *)'),
     _getVoltage: ffi('double mgos_hlw8012_getVoltage(void *)'),
     
