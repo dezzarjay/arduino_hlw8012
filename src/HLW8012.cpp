@@ -35,8 +35,10 @@ void HLW8012::begin() {
     _pulse_timeout = 500000;
 
     _current_resistor = 0.001;
+    _current_multiplier = 14484;
     _voltage_resistor = 2351;
     _voltage_multiplier = 408636;
+    _power_multiplier = 10343611;
 
     pinMode(_cf_pin, INPUT_PULLUP);
     pinMode(_cf1_pin, INPUT_PULLUP);
@@ -83,6 +85,10 @@ double HLW8012::getCurrent() {
         _current_pulse_width = pulseInLong(_cf1_pin, HIGH, _pulse_timeout);
     }
 
+    // DJ add to bypass the setmode function
+    digitalWrite(_sel_pin, HIGH);
+    _current_pulse_width = pulseInLong(_cf1_pin, HIGH, _pulse_timeout);
+
     _current = (_current_pulse_width > 0) ? _current_multiplier / _current_pulse_width / 2 : 0;
     return _current;
 
@@ -95,6 +101,8 @@ unsigned int HLW8012::getVoltage() {
         _voltage_pulse_width = pulseInLong(_cf1_pin, HIGH, _pulse_timeout);
     }
 
+    // DJ add to bypass the setmode function
+    digitalWrite(_sel_pin, LOW);
     _voltage_pulse_width = pulseInLong(_cf1_pin, HIGH, _pulse_timeout);
     
     _voltage = (_voltage_pulse_width > 0) ? _voltage_multiplier / _voltage_pulse_width / 2 : 0;
