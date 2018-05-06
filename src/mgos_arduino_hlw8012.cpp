@@ -7,7 +7,7 @@ HLW8012 *mgos_hlw8012_create() {
     return new HLW8012();
 }
 
-void mgos_hlw8012_cf_interrupt(HLW8012 *hlw) {
+/*void mgos_hlw8012_cf_interrupt(HLW8012 *hlw) {
   if (hlw == nullptr) return;
   hlw->cf_interrupt();
 }
@@ -15,7 +15,7 @@ void mgos_hlw8012_cf_interrupt(HLW8012 *hlw) {
 void mgos_hlw8012_cf1_interrupt(HLW8012 *hlw) {
   if (hlw == nullptr) return;
   hlw->cf1_interrupt();
-}
+}*/
 
 void mgos_hlw8012_begin(HLW8012 *hlw) {
   if (hlw == nullptr) return;

@@ -13,9 +13,9 @@ extern "C" {
 
 HLW8012 *mgos_hlw8012_create();
 
-void mgos_hlw8012_cf_interrupt(HLW8012 *hlw);
+//void mgos_hlw8012_cf_interrupt(HLW8012 *hlw);
 
-void mgos_hlw8012_cf1_interrupt(HLW8012 *hlw);
+//void mgos_hlw8012_cf1_interrupt(HLW8012 *hlw);
 
 void mgos_hlw8012_begin(HLW8012 *hlw);
 

@@ -1,8 +1,8 @@
 let HLW8012 = {
 
     _create: ffi('void *mgos_hlw8012_create()'),
-    _cf_interrupt: ffi('void mgos_hlw8012_cf_interrupt(void *)'),
-    _cf1_interrupt: ffi('void mgos_hlw8012_cf_interrupt(void *)'),
+    //_cf_interrupt: ffi('void mgos_hlw8012_cf_interrupt(void *)'),
+    //_cf1_interrupt: ffi('void mgos_hlw8012_cf1_interrupt(void *)'),
     _begin: ffi('void mgos_hlw8012_begin(void *)'),
     _getCurrent: ffi('double mgos_hlw8012_getCurrent(void *)'),
     _getVoltage: ffi('double mgos_hlw8012_getVoltage(void *)'),
@@ -15,13 +15,13 @@ let HLW8012 = {
 
         // Public functions
 
-        cf_interrupt: function () {
+        /*cf_interrupt: function () {
             HLW8012._cf_interrupt(this.hlw);
         }
 
         cf1_interrupt: function () {
             HLW8012._cf1_interrupt(this.hlw);
-        }
+        }*/
 
 
         // ## **`myHTU.begin()`**
@@ -51,6 +51,10 @@ let HLW8012 = {
 
         getApparentPower: function () {
             return HLW8012._getApparentPower(this.hlw);
+        },
+
+        getReactivePower: function () {
+            return HLW8012._getReactivePower(this.hlw);
         },
 
         getPowerFactor: function () {
