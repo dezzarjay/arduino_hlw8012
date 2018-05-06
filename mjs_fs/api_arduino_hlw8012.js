@@ -1,13 +1,28 @@
 let HLW8012 = {
 
     _create: ffi('void *mgos_hlw8012_create()'),
+    _cf_interrupt: ffi('void mgos_hlw8012_cf_interrupt(void *)'),
+    _cf1_interrupt: ffi('void mgos_hlw8012_cf_interrupt(void *)'),
     _begin: ffi('void mgos_hlw8012_begin(void *)'),
     _getCurrent: ffi('double mgos_hlw8012_getCurrent(void *)'),
     _getVoltage: ffi('double mgos_hlw8012_getVoltage(void *)'),
-    
+    _getActivePower: ffi('double mgos_hlw8012_getActivePower(void *)'),
+    _getApparentPower: ffi('double mgos_hlw8012_getApparentPower(void *)'),
+    _getPowerFactor: ffi('double mgos_hlw8012_getPowerFactor(void *)'),
+    _getEnergy: ffi('double mgos_hlw8012_getEnergy(void *)'),
+
     _proto: {
 
         // Public functions
+
+        cf_interrupt: function () {
+            HLW8012._cf_interrupt(this.hlw);
+        }
+
+        cf1_interrupt: function () {
+            HLW8012._cf1_interrupt(this.hlw);
+        }
+
 
         // ## **`myHTU.begin()`**
         // Initialize sensor and make it ready for use.
@@ -29,6 +44,23 @@ let HLW8012 = {
         getVoltage: function () {
             return HLW8012._getVoltage(this.hlw);
         },
+
+        getActivePower: function () {
+            return HLW8012._getActivePower(this.hlw);
+        },
+
+        getApparentPower: function () {
+            return HLW8012._getApparentPower(this.hlw);
+        },
+
+        getPowerFactor: function () {
+            return HLW8012._getPowerFactor(this.hlw);
+        },
+
+        getEnergy: function () {
+            return HLW8012._getEnergy(this.hlw);
+        },
+
 
         
     },
