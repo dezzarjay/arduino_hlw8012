@@ -8,6 +8,7 @@ let HLW8012 = {
     _getVoltage: ffi('double mgos_hlw8012_getVoltage(void *)'),
     _getActivePower: ffi('double mgos_hlw8012_getActivePower(void *)'),
     _getApparentPower: ffi('double mgos_hlw8012_getApparentPower(void *)'),
+    _getReactivePower: ffi('double mgos_hlw8012_getApparentPower(void *)'),
     _getPowerFactor: ffi('double mgos_hlw8012_getPowerFactor(void *)'),
     _getEnergy: ffi('double mgos_hlw8012_getEnergy(void *)'),
 
